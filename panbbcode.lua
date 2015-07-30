@@ -124,7 +124,7 @@ function LineBreak()
 end
 
 function Emph(s)
-  return enclose('em', s)
+  return enclose('i', s)
 end
 
 function Strong(s)
@@ -156,11 +156,7 @@ function Image(s, src, title)
 end
 
 function CaptionedImage(src, attr, title)
-  if not title or title == "" then
-    return enclose('img', src)
-  else
-    return enclose('img', src, title)
-  end
+  return enclose('img', src)
 end
 
 function Code(s, attr)
@@ -194,7 +190,7 @@ end
 
 function Header(level, s, attr)
   if level == 1 then
-    return enclose('h', s)
+    return enclose('size', s, '160')
   elseif level == 2 then
     return enclose('b', enclose('u', s))
   else
@@ -205,7 +201,7 @@ end
 function BlockQuote(s)
   local a, t = s:match('@([%w]+): (.+)')
   if a then
-    return enclose('quote', t or "Unknown" , a)
+    return enclose('quote', t or "Unknown" , '"' .. a .. '"')
   else
     return enclose('quote', s)
   end
@@ -228,7 +224,7 @@ function CodeBlock(s, attr)
 end
 
 local function makelist(items, ltype)
-  local buf = string.format("[list=%s]", ltype)
+  local buf = ltype and string.format("[list=%s]", ltype) or "[list]"
   for _,e in ipairs(items) do
     buf = buf .. enclose('*', e) .. '\n'
   end
@@ -237,7 +233,7 @@ local function makelist(items, ltype)
 end
 
 function BulletList(items)
-  return makelist(items, '*')
+  return makelist(items)
 end
 
 function OrderedList(items)
