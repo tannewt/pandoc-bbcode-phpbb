@@ -192,9 +192,9 @@ function Header(level, s, attr)
   if level == 1 then
     return enclose('size', s, '160')
   elseif level == 2 then
-    return enclose('b', enclose('u', s))
+    return enclose('b', enclose('size', s, '135'))
   else
-    return enclose('b', s)
+    return enclose('b', enclose('size', s, '115'))
   end
 end
 

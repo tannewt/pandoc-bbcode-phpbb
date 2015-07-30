@@ -1,6 +1,6 @@
 [size=160]pandoc-bbcode: Write #! forum posts in Markdown (or anything else)[/size]
 
-[b][u]Introduction[/u][/b]
+[b][size=135]Introduction[/size][/b]
 
 I often get annoyed when I write longer forum posts, as my default keyboard layout is the German one where symbols like
 
@@ -18,21 +18,21 @@ The writer itself is available on [url=https://github.com/2ion/pandoc-bbcode/arc
 
 The markdown source of this document can be found [url=https://raw.githubusercontent.com/2ion/pandoc-bbcode/master/README.mkd]here[/url]. Note that I consider it still beta software that has a bunch of bugs. If you get bitten by one, or have an improvement, please feel free to file it on [url=https://github.com/2ion/pandoc-bbcode]Github[/url].
 
-[b][u]Demonstration[/u][/b]
+[b][size=135]Demonstration[/size][/b]
 
-[b]Sectioning[/b]
+[b][size=115]Sectioning[/size][/b]
 
 [size=160]First level header[/size]
 
-[b][u]Second level header[/u][/b]
+[b][size=135]Second level header[/size][/b]
 
-[b]Third level and other headers[/b]
+[b][size=115]Third level and other headers[/size][/b]
 
-[b]Text emphasis[/b]
+[b][size=115]Text emphasis[/size][/b]
 
 [i]Simple emphasis[/i], [b]strong emphasis[/b]
 
-[b]Quoting[/b]
+[b][size=115]Quoting[/size][/b]
 
 [quote]This is a simple block quote[/quote]
 
@@ -44,11 +44,11 @@ you get the classic forum quote
 
 [quote="myself"]This is me quoting myself[/quote]
 
-[b]Footnotes[/b]
+[b][size=115]Footnotes[/size][/b]
 
 We can now do footnotes[1]. They will be put at the very end of the post!
 
-[b]Links and images[/b]
+[b][size=115]Links and images[/size][/b]
 
 We can now do inline links and labelled links! Now link targets can be defined in bulk at the end of the document or right at the beginning (which is my personal preference).
 
@@ -59,7 +59,7 @@ Images can be included with or without an alt text.
 
 [img]http://i.imgur.com/B63RuQLl.jpg[/img]
 
-[b]Lists[/b]
+[b][size=115]Lists[/size][/b]
 
 Simple, simple, and without using the sick BBCode syntax!
 
@@ -71,7 +71,7 @@ Simple, simple, and without using the sick BBCode syntax!
 [*]List[/*]
 [/list]
 
-[b]Tables[/b]
+[b][size=115]Tables[/size][/b]
 
 BBCode doesn't render tables, nor allows it raw HTML tags. The only solution for rendering thus is rendering them as ASCII tables. There's just one problem: we can't call column or any other renderer from within the Pandoc writer because it disallows writers to call system functions like popen().
 
