@@ -41,7 +41,7 @@ The writer itself is available on [Github][link:writer]
 following way:
 
 ```
-pandoc -t pandoc-bbcode.lua -o $output $input
+pandoc -t panbbcode.lua -o $output $input
 ```
 
 The markdown source of this document can be found [here][link:this].
